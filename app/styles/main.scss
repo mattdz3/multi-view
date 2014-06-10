@@ -2,7 +2,57 @@
 // endbower
 
 body {
-    background: #fafafa;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #333;
+    font-family: 'Hammersmith One', sans-serif;
+    background-color: rgb(142, 140, 154);
+}
+
+.header {
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    text-align: center;
+    font-size: 30px;
+    height: 80px;
+    width: 100%;
+}
+
+.left-container {
+    display: inline-block;
+    width: 33%;
+    height: 800px;
+    background-color: blue;
+    overflow: scroll;
+}
+
+.left-container-text {
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.middle-container {
+    display: inline-block;
+    width: 33%;
+    height: 800px;
+    background-color: red;
+    overflow: scroll;
+}
+
+.right-container {
+    display: inline-block;
+    width: 33%;
+    height: 800px;
+    background-color: yellow;
+    overflow: scroll;
+}
+
+
+.list-one {
+    display: inline-block;
+}
+
+.list-one img {
+    padding: 5px;
+    width: 145px;
+    height: 145px;
 }
