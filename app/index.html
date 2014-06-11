@@ -22,7 +22,10 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <div class="header">CRAZY LIST THING</div>
+        <h1 class="header">
+            <img class="logo" src='http://fc02.deviantart.net/fs25/f/2013/226/4/3/4382afbbf63fcc2fad33c85c6f210628-d1hw8kb.jpg'>
+            Webs Best Photo Gallery
+        </h1>
 
         <div class="container-left"></div>
         <div class="container-middle"></div>
@@ -30,11 +33,12 @@
 
         <script type="text/template" class="left-images">
 
-            <a href="/#photo/<%= _id %>"><img src="<%= url %>"> </a>
-
-            <div>
+            <a href="/#photo/<%= _id %>">
+                <img src="<%= url %>"> 
+            </a>
+            <div class='move-button'>
                 <button class='move-to-left button'>Left</button>
-                <button class='move-to-mid button'>Middle</button>
+                <button class='move-to-mid button'>Mid</button>
                 <button class='move-to-right button'>Right</button>
             </div>
 

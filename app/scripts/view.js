@@ -4,6 +4,8 @@ var MainView = Backbone.View.extend({
 	
 	className: "list-one",
 
+	
+
 	template: _.template($('.left-images').text()),
 
 	events: {
