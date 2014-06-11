@@ -8,11 +8,14 @@ var MainView = Backbone.View.extend({
 
 	events: {
 
+		'click .move-to-left' : 'moveLeft',
+		'click .move-to-mid' : 'moveMid',
+		'click .move-to-right' : 'moveRight'	 
 	},
 
 	initialize: function() {
 
-		$('.left-container').append(this.el)
+		$('.container-left').append(this.el);
 		this.render();
 	},
 
@@ -23,5 +26,12 @@ var MainView = Backbone.View.extend({
 		return this;
 	},
 
+	deletePhoto: function() {
+		this.model.destroy();
+		this.remove();
+	},
+
+
 })
+
 

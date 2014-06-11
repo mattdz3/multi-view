@@ -16,7 +16,7 @@ body {
     width: 100%;
 }
 
-.left-container {
+.container-left {
     display: inline-block;
     width: 33%;
     height: 800px;
@@ -30,7 +30,7 @@ body {
     text-align: center;
 }
 
-.middle-container {
+.container-middle {
     display: inline-block;
     width: 33%;
     height: 800px;
@@ -38,7 +38,7 @@ body {
     overflow: scroll;
 }
 
-.right-container {
+.container-right {
     display: inline-block;
     width: 33%;
     height: 800px;
@@ -56,3 +56,13 @@ body {
     width: 145px;
     height: 145px;
 }
+
+.delete {
+    margin-left: 5px;
+    display: inline-block;
+}
+
+.add {
+    display: inline-block;
+}
+

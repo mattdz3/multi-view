@@ -13,15 +13,13 @@ var Model = Backbone.Model.extend({
 
 		})
 	},
-
 })
 
 var LeftCollection = Backbone.Collection.extend({
 
-model: Model,
+	model: Model,
 
-url: 'http://tiny-pizza-server.herokuapp.com/collections/photos'
-
+	url: 'http://tiny-pizza-server.herokuapp.com/collections/photos'
 })
 
 var MiddleCollection = Backbone.Collection.extend({
@@ -29,7 +27,6 @@ var MiddleCollection = Backbone.Collection.extend({
 	model: Model,
 
 	url: 'http://tiny-pizza-server.herokuapp.com/collections/MD-photos'
-
 })
 
 var RightCollection = Backbone.Collection.extend({

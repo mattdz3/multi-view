@@ -24,26 +24,23 @@
 
         <div class="header">CRAZY LIST THING</div>
 
-        <div class="left-container">
-            <div class="left-container-text">Select an image to move</div>
-        </div>
-
-        <div class="middle-container"></div>
-        <div class="right-container"></div>
+        <div class="container-left"></div>
+        <div class="container-middle"></div>
+        <div class="container-right"></div>
 
         <script type="text/template" class="left-images">
 
-            <a href="/#photo/<%= _id %>"><img src="<%= url %>"> </a> 
+            <a href="/#photo/<%= _id %>"><img src="<%= url %>"> </a>
+
+            <div>
+                <button class='move-to-left button'>Left</button>
+                <button class='move-to-mid button'>Middle</button>
+                <button class='move-to-right button'>Right</button>
+            </div>
 
         </script>
 
-        <script type="text/template" class="middle-images">
-
-        </script>
-
-        <script type="text/template" class="right-images">
-
-        </script>
+        
 
 
         <!-- build:js scripts/vendor.js -->
