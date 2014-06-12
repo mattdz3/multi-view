@@ -14,21 +14,21 @@ var MyRouter = Backbone.Router.extend({
 		leftPhotos.fetch().done(function() {
 			leftPhotos.each(function(photos) {
 			
-				new MainView({ model: photos });
+				new LeftView({ model: photos });
 			})
 		});
 
 		midPhotos.fetch().done(function() {
 			midPhotos.each(function(photos) {
 			
-				new MainView({ model: photos });
+				new MidView({ model: photos });
 			})
 		});
 
 		rightPhotos.fetch().done(function() {
 			rightPhotos.each(function(photos) {
 				
-				new MainView({ model: photos });
+				new RightView({ model: photos });
 			})
 		});
 	},

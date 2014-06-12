@@ -35,30 +35,11 @@ h1 {
     }
 }
 
-
-// @media screen and (max-width: 800px) {
-//   div {
-//     width: 45%;
-//     margin-right: 10%;
-//   }
-  
-//   div:nth-of-type(3n){
-//     margin-right: 10%;
-//     background: red;
-//   }
-  
-//   div:nth-of-type(2n) {
-//     margin-right: 0;
-//     background: yellow;
-//   }
-  
-// }
-
 .container-left {
     display: inline-block;
     width: 33%;
     height: 70em;
-    background-color: blue;
+    background-color: #312323;
     overflow: scroll;
 }
 
@@ -72,7 +53,7 @@ h1 {
     display: inline-block;
     width: 33%;
     height: 70em;
-    background-color: red;
+    background-color: #312323;
     overflow: scroll;
 }
 
@@ -80,7 +61,7 @@ h1 {
     display: inline-block;
     width: 33%;
     height: 70em;
-    background-color: yellow;
+    background-color: #312323;
     overflow: scroll;
 }
 
