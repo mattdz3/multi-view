@@ -1,37 +1,30 @@
 "use strict";
 
-var Model = Backbone.Model.extend({
-
+var Photo = Backbone.Model.extend({
 	attribute: "_id",
 
 	defaults: {
 		url: ""
-	},
+	}
+});
 
-	initialize: function() {
-		this.on('change', function() {
+// url: 'http://tiny-pizza-server.herokuapp.com/collections/photos'
+// url: 'http://tiny-pizza-server.herokuapp.com/collections/MD-photos'
+// url: 'http://tiny-pizza-server.herokuapp.com/collections/MD2-photos'
 
+var PhotoCollection = Backbone.Collection.extend({
+	model: Photo,
+
+	initialize: function(options) {
+		this.url = options.url;
+
+		this.id = _.uniqueId('collection-');
+
+		this.on('add', function(photo){
+			new PhotoView({ 
+				model: photo,
+				container: $('.' + this.id)
+			});
 		})
-	},
-})
-
-var LeftCollection = Backbone.Collection.extend({
-
-	model: Model,
-
-	url: 'http://tiny-pizza-server.herokuapp.com/collections/photos'
-})
-
-var MiddleCollection = Backbone.Collection.extend({
-
-	model: Model,
-
-	url: 'http://tiny-pizza-server.herokuapp.com/collections/MD-photos'
-})
-
-var RightCollection = Backbone.Collection.extend({
-
-	model: Model,
-
-	url: 'http://tiny-pizza-server.herokuapp.com/collections/MD2-photos'
+	}
 })

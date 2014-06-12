@@ -24,56 +24,23 @@
 
         <h1 class="header">
             <img class="logo" src='http://fc02.deviantart.net/fs25/f/2013/226/4/3/4382afbbf63fcc2fad33c85c6f210628-d1hw8kb.jpg'>
-            Webs Best Photo Gallery
+            Web's Best Photo Gallery
         </h1>
 
-        <div class="container-left"></div>
-        <div class="container-middle"></div>
-        <div class="container-right"></div>
+        <div class="collections-container"></div>
 
-        <script type="text/template" class="left-images">
+        <script type="text/template" class="image-template">
 
             <a href="/#photo/<%= _id %>">
                 <img src="<%= url %>"> 
             </a>
             <div class='move-button'>
                 <button class='move-to-left button'>Left</button>
-                <button class='move-to-mid button'>Mid</button>
+                <button class='delete button'>Delete</button>
                 <button class='move-to-right button'>Right</button>
             </div>
 
         </script>
-
-          <script type="text/template" class="right-images">
-
-            <a href="/#photo/<%= _id %>">
-                <img src="<%= url %>"> 
-            </a>
-            <div class='move-button'>
-                <button class='move-to-left button'>Left</button>
-                <button class='move-to-mid button'>Mid</button>
-                <button class='move-to-right button'>Right</button>
-            </div>
-
-        </script>
-
-
-          <script type="text/template" class="middle-images">
-
-            <a href="/#photo/<%= _id %>">
-                <img src="<%= url %>"> 
-            </a>
-            <div class='move-button'>
-                <button class='move-to-left button'>Left</button>
-                <button class='move-to-mid button'>Mid</button>
-                <button class='move-to-right button'>Right</button>
-            </div>
-
-        </script>
-
-
-        
-
 
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->

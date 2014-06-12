@@ -35,34 +35,15 @@ h1 {
     }
 }
 
-.container-left {
+.container {
     display: inline-block;
     width: 33%;
     height: 70em;
     background-color: #312323;
     overflow: scroll;
-}
-
-.left-container-text {
-    padding: 0.8em;
-    font-size: 1.2em;
-    text-align: center;
-}
-
-.container-middle {
-    display: inline-block;
-    width: 33%;
-    height: 70em;
-    background-color: #312323;
-    overflow: scroll;
-}
-
-.container-right {
-    display: inline-block;
-    width: 33%;
-    height: 70em;
-    background-color: #312323;
-    overflow: scroll;
+    color: white;
+    font-size: 20px;
+    line-height: 28px;
 }
 
 .list-one {
