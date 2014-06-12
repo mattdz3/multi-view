@@ -19,6 +19,9 @@ var LeftView = Backbone.View.extend({
 
 	initialize: function() {
 
+		this.listenTo(this.model, 'destroy', this.remove);
+		this.listenTo(this.model, 'change', this.render);
+
 		$('.container-left').append(this.el);
 		this.render();
 	},
@@ -31,29 +34,44 @@ var LeftView = Backbone.View.extend({
 	},
 
 	moveRight: function() {
-		this.model.destroy();
-		this.remove();
+		$.post('http://tiny-pizza-server.herokuapp.com/collections/MD2-photos', {
+        	url: this.model.attributes.url,
+    	});
 
-		rightPhotos.add(this.$el.get({ model: 'url' }))
-		$('.container-right').append(this.el)
-
-		var renderTemp = this.rightTemp(this.model.attributes)
-		this.$el.html(renderTemp);
-
-
+    	this.model.destroy().done(function(){
+	      	$('.right-images').html('');
+	      	$('.right-images').append('');
+	      	var route = new MyRouter;
+	    })
 	},
 
-	// moveLeft: function() {
-	// 	this.model.destroy();
-	// 	this.remove();
-	// },
+	moveLeft: function() {
+			$.post('http://tiny-pizza-server.herokuapp.com/collections/photos', {
+        	url: this.model.attributes.url,
+    	});
 
-	// moveMid: function() {
-	// 	this.model.destroy();
-	// 	this.remove();
-	// },
+    	this.model.destroy().done(function(){
+	      	$('.left-images').html('');
+	      	$('.left-images').append('');
+	      	var route = new MyRouter;
+	    })
+	},
+
+	moveMid: function() {
+		$.post('http://tiny-pizza-server.herokuapp.com/collections/MD-photos', {
+        	url: this.model.attributes.url,
+    	});
+
+    	this.model.destroy().done(function(){
+	      	$('.middle-images').html('');
+	      	$('.middle-images').append('');
+	      	var route = new MyRouter;
+	    })
+	},
 
 })
+
+//////////////////////////////////////////////////////////
 
 var RightView = Backbone.View.extend({
 	
@@ -71,6 +89,9 @@ var RightView = Backbone.View.extend({
 
 	initialize: function() {
 
+		this.listenTo(this.model, 'destroy', this.remove);
+		this.listenTo(this.model, 'change', this.change);
+
 		$('.container-right').append(this.el);
 		this.render();
 	},
@@ -83,25 +104,44 @@ var RightView = Backbone.View.extend({
 	},
 
 	moveRight: function() {
-		this.model.destroy();
-		this.remove();
+		$.post('http://tiny-pizza-server.herokuapp.com/collections/MD2-photos', {
+        	url: this.model.attributes.url,
+    	});
 
-		rightPhotos.add(this.el.get({ model: 'url' }))
-		$('.container-right').append(this.el)
-
+    	this.model.destroy().done(function(){
+	      	$('.right-images').html('');
+	      	$('.right-images').append('');
+	      	var route = new MyRouter;
+	    })
 	},
 
-	// moveLeft: function() {
-	// 	this.model.destroy();
-	// 	this.remove();
-	// },
+	moveLeft: function() {
+			$.post('http://tiny-pizza-server.herokuapp.com/collections/photos', {
+        	url: this.model.attributes.url,
+    	});
 
-	// moveMid: function() {
-	// 	this.model.destroy();
-	// 	this.remove();
-	// },
+    	this.model.destroy().done(function(){
+	      	$('.left-images').html('');
+	      	$('.left-images').append('');
+	      	var route = new MyRouter;
+	    })
+	},
+
+	moveMid: function() {
+		$.post('http://tiny-pizza-server.herokuapp.com/collections/MD-photos', {
+        	url: this.model.attributes.url,
+    	});
+
+    	this.model.destroy().done(function(){
+	      	$('.middle-images').html('');
+	      	$('.middle-images').append('');
+	      	var route = new MyRouter;
+	    })
+	},
 
 })
+
+/////////////////////////////////////////////////////////////////
 
 var MidView = Backbone.View.extend({
 	
@@ -119,6 +159,9 @@ var MidView = Backbone.View.extend({
 
 	initialize: function() {
 
+		this.listenTo(this.model, 'destroy', this.remove);
+		this.listenTo(this.model, 'change', this.change);
+
 		$('.container-middle').append(this.el);
 		this.render();
 	},
@@ -131,26 +174,42 @@ var MidView = Backbone.View.extend({
 	},
 
 	moveRight: function() {
-		this.model.destroy();
-		this.remove();
+		$.post('http://tiny-pizza-server.herokuapp.com/collections/MD2-photos', {
+        	url: this.model.attributes.url,
+    	});
 
-		rightPhotos.add(this.$el.get({ model: 'url' }))
-		$('.container-right').append(this.el)
-
-	
-
-
+    	this.model.destroy().done(function(){
+	      	$('.right-images').html('');
+	      	$('.right-images').append('');
+	      	var route = new MyRouter;
+	    })
 	},
 
-	// moveLeft: function() {
-	// 	this.model.destroy();
-	// 	this.remove();
-	// },
+	moveLeft: function() {
+			$.post('http://tiny-pizza-server.herokuapp.com/collections/photos', {
+        	url: this.model.attributes.url,
+    	});
 
-	// moveMid: function() {
-	// 	this.model.destroy();
-	// 	this.remove();
-	// },
+    	this.model.destroy().done(function(){
+	      	$('.left-images').html('');
+	      	$('.left-images').append('');
+	      	var route = new MyRouter;
+	    })
+	},
+
+	moveMid: function() {
+		$.post('http://tiny-pizza-server.herokuapp.com/collections/MD-photos', {
+        	url: this.model.attributes.url,
+    	});
+
+    	this.model.destroy().done(function(){
+	      	$('.middle-images').html('');
+	      	$('.middle-images').append('');
+	      	var route = new MyRouter;
+	    })
+	},
 
 })
+
+
 
