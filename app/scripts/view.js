@@ -21,8 +21,6 @@ var PhotoView = Backbone.View.extend({
 
 		this.$container.append(this.el);
 		this.render();
-
-		// console.log('HI, my model is', this.model)
 	},
 
 	render: function() {
@@ -32,7 +30,6 @@ var PhotoView = Backbone.View.extend({
 	},
 
 	deleteButton: function() {
-		console.log(this.model)
 		this.model.destroy();
 	},
 

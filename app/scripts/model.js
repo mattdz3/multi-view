@@ -1,7 +1,7 @@
 "use strict";
 
 var Photo = Backbone.Model.extend({
-	attribute: "_id",
+	idAttribute: "_id",
 
 	defaults: {
 		url: ""
@@ -13,6 +13,7 @@ var Photo = Backbone.Model.extend({
 // url: 'http://tiny-pizza-server.herokuapp.com/collections/MD2-photos'
 
 var PhotoCollection = Backbone.Collection.extend({
+
 	model: Photo,
 
 	initialize: function(options) {
