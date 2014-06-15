@@ -13,10 +13,12 @@ collectionsArray.forEach(function (coll) {
 	freshDiv.addClass(coll.id + ' container');
 	$('.collections-container').append(freshDiv);
 
-	freshDiv.html('this is .collection-' + coll.id)
-	freshDiv.html('this url' + coll.url)
+	// freshDiv.html('this is .collection-' + coll.id)
+	// freshDiv.html('this url' + coll.url)
 
 	coll.fetch();
 })
+
+
 
 
