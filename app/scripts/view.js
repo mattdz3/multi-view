@@ -79,8 +79,4 @@ var PhotoView = Backbone.View.extend({
 		console.log('freshModel is', freshModel)
 		this.model.destroy();
 	}
-
-		
-
-
 })
